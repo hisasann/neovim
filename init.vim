@@ -46,6 +46,8 @@ syntax enable
 " basic settings {{{
 set number        " 行番号を非表示
 set ruler        " ルーラーを表示 (noruler:非表示)
+set clipboard+=unnamedplus
+set mouse=a
 
 " Insert Mode
 inoremap <silent> jj <ESC>:<C-u>w<CR>:" InsertMode抜けて保存
