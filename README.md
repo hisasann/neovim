@@ -51,6 +51,18 @@ $ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh
 $ sh ./installer.sh ~/.cache/dein
 ```
 
+## dein.vimのキャッシュをクリアする
+
+```
+:call dein#recache_runtimepath()
+```
+
+## dein.vimでモジュールたちをインストールする
+
+```
+:call dein#install()
+```
+
 ## 参考記事
 
 [Neovimのセットアップ方法(Mac) - Qiita](https://qiita.com/uhooi/items/8a023c24c004ec0c8b84)
@@ -59,3 +71,16 @@ $ sh ./installer.sh ~/.cache/dein
 
 [MacでNeovimをPythonの開発環境にする](https://python.ms/neovim/)
 
+## defx.vim参考記事
+
+defx.vim 公式の設定たちよ
+
+[defx.nvim/defx.txt at master · Shougo/defx.nvim](https://github.com/Shougo/defx.nvim/blob/master/doc/defx.txt)
+
+[Defx.nvim を使う! | 完成形で未完成](https://tech.39.gy/terminal/defx/)
+
+[【Vim】defx.nvimで高速でリッチなファイラを実現する(アイコン、git status表示) - Qiita](https://qiita.com/arks22/items/9688ec7f4cb43444e9d9)
+
+[defxを使ってみる - 環境構築・零](https://takkii.hatenablog.com/entry/2018/08/19/133847)
+
+[【vim】defx.nvimを設定！defx-git！defx-icon！](https://castleobj.com/defx/)
