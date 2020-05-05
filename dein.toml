@@ -16,6 +16,9 @@ depends = ['vim-airline-themes']
 repo = 'dracula/vim'
 
 [[plugins]]
+repo = 'cespare/vim-toml'
+
+[[plugins]]
 repo = 'kristijanhusak/defx-git'
 hook_add = '''
 call defx#custom#column('git', 'indicators', {
@@ -55,6 +58,7 @@ autocmd FileType defx call s:defx_my_settings()
     nnoremap <silent><buffer><expr> c defx#do_action('copy')
     nnoremap <silent><buffer><expr> m defx#do_action('move')
     nnoremap <silent><buffer><expr> p defx#do_action('paste')
+    nnoremap <silent><buffer><expr> e defx#do_action('drop')
     nnoremap <silent><buffer><expr> l defx#do_action('drop')
     nnoremap <silent><buffer><expr> E defx#do_action('drop', 'vsplit')
     nnoremap <silent><buffer><expr> P defx#do_action('drop', 'pedit')
