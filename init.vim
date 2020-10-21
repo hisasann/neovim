@@ -220,12 +220,6 @@ command! Hoge edit ~/Dropbox/hoge/hoge.markdown
 "---------------------------------------------------------------------------
 
 "---------------------------------------------------------------------------
-" for Shougo/deoplete.nvim {{{
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
-" }}}
-
-"---------------------------------------------------------------------------
 " for bling/vim-airline {{{
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
