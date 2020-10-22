@@ -140,6 +140,19 @@ noremap <Space>l  $
 " }}}
 
 "---------------------------------------------------------------------------
+" Windows  {{{
+" Split window
+nmap ss :split<Return><C-w>w
+nmap sv :vsplit<Return><C-w>w
+" Move window
+nmap <Space> <C-w>w
+map s<left> <C-w>h
+map s<up> <C-w>k
+map s<down> <C-w>j
+map s<right> <C-w>l
+" }}}
+
+"---------------------------------------------------------------------------
 " edit settings {{{
 " insertモードを抜けるとIMEオフ
 set noimdisable
@@ -162,14 +175,6 @@ noremap ; :
 
 " 行末までのヤンクにする
 nnoremap Y y$
-
-" 括弧入力後に←に移動
-imap {} {}<Left>
-imap [] []<Left>
- imap () ()<Left>
-imap "" ""<Left>
-imap '' ''<Left>
-imap <> <><Left>
 
 " ファイルタイプ
 nnoremap ,js   :<C-u>set filetype=javascript<CR>
