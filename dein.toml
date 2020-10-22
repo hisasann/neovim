@@ -12,6 +12,9 @@ repo = 'vim-airline/vim-airline'
 depends = ['vim-airline-themes']
 
 [[plugins]]
+repo = 'jiangmiao/auto-pairs'
+
+[[plugins]]
 repo = 'dracula/vim'
 
 [[plugins]]
