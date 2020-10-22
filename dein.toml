@@ -3,7 +3,6 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'Shougo/denite.nvim'
-on_cmd = 'Denite'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
@@ -41,12 +40,16 @@ repo = 'Shougo/defx.nvim'
 on_cmd = 'Defx'
 depends = ['defx-git', 'defx-icons']
 hook_add = '''
+nnoremap <silent>sf :<C-u>Defx -listed -resume
+      \ -buffer-name=tab`tabpagenr()`
+      \ `expand('%:p:h')` -search=`expand('%:p')`<CR>
+nnoremap <silent>fi :<C-u>Defx -new `expand('%:p:h')` -search=`expand('%:p')`<CR>
 nnoremap <F3> :<C-u>Defx<CR>
 call defx#custom#option('_', {
-  \ 'winwidth': 50,
-  \ 'split': 'vertical',
-  \ 'direction': 'topleft',
-  \ 'buffer_name': 'exproler',
+"  \ 'winwidth': 50,
+"  \ 'split': 'vertical',
+"  \ 'direction': 'topleft',
+"  \ 'buffer_name': 'exproler',
   \ 'toggle': 1,
   \ 'resume': 1,
   \ 'show_ignored_files': 1,
@@ -54,14 +57,14 @@ call defx#custom#option('_', {
 autocmd FileType defx call s:defx_my_settings()
   function! s:defx_my_settings() abort
     " Define mappings
-    nnoremap <silent><buffer><expr> <CR> defx#do_action('drop')
+    nnoremap <silent><buffer><expr> <CR> defx#do_action('open')
     nnoremap <silent><buffer><expr> c defx#do_action('copy')
     nnoremap <silent><buffer><expr> m defx#do_action('move')
     nnoremap <silent><buffer><expr> p defx#do_action('paste')
-    nnoremap <silent><buffer><expr> e defx#do_action('drop')
-    nnoremap <silent><buffer><expr> l defx#do_action('drop')
-    nnoremap <silent><buffer><expr> E defx#do_action('drop', 'vsplit')
-    nnoremap <silent><buffer><expr> P defx#do_action('drop', 'pedit')
+    nnoremap <silent><buffer><expr> e defx#do_action('open')
+    nnoremap <silent><buffer><expr> l defx#do_action('open')
+    nnoremap <silent><buffer><expr> E defx#do_action('open', 'vsplit')
+    nnoremap <silent><buffer><expr> P defx#do_action('open', 'pedit')
     nnoremap <silent><buffer><expr> o defx#do_action('open','tabnew')
     nnoremap <silent><buffer><expr> t defx#do_action('open_tree', 'toggle')
     nnoremap <silent><buffer><expr> K defx#do_action('new_directory')
@@ -87,6 +90,22 @@ autocmd FileType defx call s:defx_my_settings()
     nnoremap <silent><buffer><expr> <C-g> defx#do_action('print')
     nnoremap <silent><buffer><expr> cd defx#do_action('change_vim_cwd')
   endfunction
+
+call defx#custom#column('icon', {
+      \ 'directory_icon': '▸',
+      \ 'opened_icon': '▾',
+      \ 'root_icon': ' ',
+      \ })
+call defx#custom#column('git', 'indicators', {
+  \ 'Modified'  : 'M',
+  \ 'Staged'    : '✚',
+  \ 'Untracked' : '✭',
+  \ 'Renamed'   : '➜',
+  \ 'Unmerged'  : '═',
+  \ 'Ignored'   : '☒',
+  \ 'Deleted'   : '✖',
+  \ 'Unknown'   : '?'
+  \ })
 '''
 
 [[plugins]]
