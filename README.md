@@ -65,7 +65,9 @@ $ sh ./installer.sh ~/.cache/dein
 
 ## coc.vimで困ったら
 
+```
 :call coc#util#install()
+```
 
 ## 参考記事
 
