@@ -63,6 +63,10 @@ $ sh ./installer.sh ~/.cache/dein
 :call dein#install()
 ```
 
+## coc.vimで困ったら
+
+:call coc#util#install()
+
 ## 参考記事
 
 [Neovimのセットアップ方法(Mac) - Qiita](https://qiita.com/uhooi/items/8a023c24c004ec0c8b84)
