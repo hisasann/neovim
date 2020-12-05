@@ -214,6 +214,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" https://twitter.com/yutakatay/status/1334995902184869889?s=21
+noremap x "_x
+
 " hogeファイル
 command! Hoge edit ~/Dropbox/hoge/hoge.markdown
 
