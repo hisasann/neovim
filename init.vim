@@ -53,7 +53,7 @@ set mouse=a
 inoremap <silent> jj <ESC>:<C-u>w<CR>:" InsertMode抜けて保存
 
 " encode setting
-set encoding=utf-8
+set encoding=UTF-8
 
 set background=dark
 colorscheme dracula
@@ -62,12 +62,6 @@ colorscheme dracula
 set title titlestring=%t%(\ %M%)%(\ (%{expand(\"%:~:.:h\")})%)%(\ %a%)
 set linespace=0
 set showcmd        " コマンドをステータス行に表
-if has("win32") || has("win64")
-  " sjisはWindows用
-  set encoding=sjis
-else
-  set encoding=utf-8
-endif
 
 " }}}
 

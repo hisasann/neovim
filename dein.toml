@@ -36,9 +36,6 @@ call defx#custom#column('git', 'indicators', {
 """
 
 [[plugins]]
-repo = 'kristijanhusak/defx-icons'
-
-[[plugins]]
 repo = 'Shougo/defx.nvim'
 on_cmd = 'Defx'
 depends = ['defx-git', 'defx-icons']
@@ -56,6 +53,7 @@ call defx#custom#option('_', {
   \ 'toggle': 1,
   \ 'resume': 1,
   \ 'show_ignored_files': 1,
+  \ 'columns': 'git:icons:indent:filename:mark',
   \ })
 autocmd FileType defx call s:defx_my_settings()
   function! s:defx_my_settings() abort
@@ -110,6 +108,12 @@ call defx#custom#column('git', 'indicators', {
   \ 'Unknown'   : '?'
   \ })
 """
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+[[plugins]]
+repo = 'kristijanhusak/defx-icons'
 
 # https://github.com/prabirshrestha/vim-lsp
 # https://mattn.kaoriya.net/software/vim/20191231213507.htm
