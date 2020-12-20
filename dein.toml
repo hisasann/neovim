@@ -123,7 +123,6 @@ repo = 'prabirshrestha/asyncomplete.vim'
 repo = 'prabirshrestha/asyncomplete-lsp.vim'
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
-depends = ['mattn/vim-lsp-settings', 'mattn/vim-lsp-icons']
 hook_add = """
 function! s:on_lsp_buffer_enabled() abort
   setlocal omnifunc=lsp#complete
@@ -140,6 +139,10 @@ augroup lsp_install
 augroup END
 command! LspDebug let lsp_log_verbose=1 | let lsp_log_file = expand('~/lsp.log')
 """
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+[[plugins]]
+repo = 'mattn/vim-lsp-icons'
 [[plugins]]
 repo = 'hrsh7th/vim-vsnip'
 [[plugins]]
