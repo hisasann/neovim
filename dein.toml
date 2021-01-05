@@ -8,6 +8,10 @@ repo = 'Shougo/denite.nvim'
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
+# https://vi.stackexchange.com/questions/18265/getting-fugitive-no-gbrowse-handler-found
+repo = 'tpope/vim-rhubarb'
+
+[[plugins]]
 repo = 'vim-airline/vim-airline'
 depends = ['vim-airline-themes']
 
