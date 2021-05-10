@@ -1043,7 +1043,7 @@ function __bobthefish_prompt_lemon -S -d 'Display lemon icon'
     and return
 
     __bobthefish_start_segment $color_virtualfish
-    echo -ns '🍋 Sour&Lemon, Inc'
+    echo -ns 'Sour&Lemon, Inc '
 end
 
 # ==============================
