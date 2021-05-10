@@ -1038,6 +1038,13 @@ function __bobthefish_prompt_dir -S -a real_pwd -d 'Display a shortened form of 
     __bobthefish_path_segment "$real_pwd"
 end
 
+function __bobthefish_prompt_lemon -S -d 'Display lemon icon'
+    [ "$theme_display_lemon" = 'no' ]
+    and return
+
+    __bobthefish_start_segment $color_virtualfish
+    echo -ns '🍋 Sour&Lemon, Inc'
+end
 
 # ==============================
 # Apply theme
@@ -1077,6 +1084,7 @@ function fish_prompt -d 'bobthefish, a fish theme optimized for awesome'
     # Virtual environments
     __bobthefish_prompt_desk
     #__bobthefish_prompt_rubies
+    __bobthefish_prompt_lemon
     __bobthefish_prompt_virtualfish
     __bobthefish_prompt_virtualgo
     __bobthefish_prompt_nvm
