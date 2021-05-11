@@ -1,16 +1,48 @@
-## インストールする
+# hisasann's neovim settings
+
+## dotfiles
+
+[hisasann/dotfile: 💻 my dotfiles [vim][tmux][zsh][fish]](https://github.com/hisasann/dotfile)
+
+## Vim setup
+
+[Shougo/dein.vim: Dark powered Vim/Neovim plugin manager](https://github.com/Shougo/dein.vim)
+
+[Shougo/defx.nvim: The dark powered file explorer implementation](https://github.com/Shougo/defx.nvim)
+
+[Shougo/denite.nvim: Dark powered asynchronous unite all interfaces for Neovim/Vim8](https://github.com/Shougo/denite.nvim)
+
+[jiangmiao/auto-pairs: Vim plugin, insert or delete brackets, parens, quotes in pair](https://github.com/jiangmiao/auto-pairs)
+
+[prabirshrestha/vim-lsp: async language server protocol plugin for vim and neovim](https://github.com/prabirshrestha/vim-lsp)
+
+## Shell setup
+
+[fish shell](https://fishshell.com/)
+
+[jorgebucaran/fisher: A plugin manager for Fish.](https://github.com/jorgebucaran/fisher)
+
+[ryanoasis/nerd-fonts: Iconic font aggregator, collection, & patcher. 3,600+ icons, 50+ patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, & more](https://github.com/ryanoasis/nerd-fonts)
+
+[jethrokuan/z: Pure-fish z directory jumping](https://github.com/jethrokuan/z)
+
+[exa · a modern replacement for ls](https://the.exa.website/)
+
+# neovimをセットアップする
+
+## neovimをインストールする
 
 ```bash
 $ brew install neovim
 ```
 
-## バージョンを確認する
+## neovimのバージョンを確認する
 
 ```bash
 $ nvim -v
 ```
 
-## 設定ファイルを配置する
+## neovimの設定ファイルを配置する
 
 以下のディレクトリがなければ作成します。
 
