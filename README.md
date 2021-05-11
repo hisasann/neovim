@@ -28,6 +28,8 @@
 
 [exa · a modern replacement for ls](https://the.exa.website/)
 
+[hisasann/ide: tmux の画面分割いい感じにする shell](https://github.com/hisasann/ide)
+
 # neovimをセットアップする
 
 ## neovimをインストールする
