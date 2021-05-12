@@ -1,3 +1,5 @@
+![screen shot](/images/screen-shot.png)
+
 # hisasann's neovim settings
 
 ## dotfiles
