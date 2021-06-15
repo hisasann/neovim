@@ -216,6 +216,13 @@ noremap x "_x
 " hogeファイル
 command! Hoge edit ~/Dropbox/hoge/hoge.markdown
 
+" https://mattn.kaoriya.net/software/vim/20071207013918.htm
+" expand path
+cmap <c-x> <c-r>=expand('%:p:h')<cr>/
+" expand file (not ext)
+cmap <c-z> <c-r>=expand('%:p:r')<cr>
+" :cd <C-X> -> :cd /path/to/file/ になる
+
 " }}}
 
 
