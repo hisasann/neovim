@@ -18,6 +18,8 @@
 
 [prabirshrestha/vim-lsp: async language server protocol plugin for vim and neovim](https://github.com/prabirshrestha/vim-lsp)
 
+[ggreer/the_silver_searcher: A code-searching tool similar to ack, but faster.](https://github.com/ggreer/the_silver_searcher)
+
 ## Shell setup
 
 [fish shell](https://fishshell.com/)
