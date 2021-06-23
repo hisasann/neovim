@@ -55,6 +55,11 @@ inoremap <silent> jj <ESC>:<C-u>w<CR>:" InsertMode抜けて保存
 " encode setting
 set encoding=UTF-8
 
+" バックアップファイルを作らない
+set nobackup
+" スワップファイルを作らない
+set noswapfile
+
 set background=dark
 colorscheme dracula
 
