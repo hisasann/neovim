@@ -247,3 +247,12 @@ repo = 'mattn/vim-lsp-icons'
 repo = 'hrsh7th/vim-vsnip'
 [[plugins]]
 repo = 'hrsh7th/vim-vsnip-integ'
+
+# caw comment out
+[[plugins]]
+repo = 'tyru/caw.vim'
+hook_add = """
+nmap ;c <Plug>(caw:hatpos:toggle)
+vmap ;c <Plug>(caw:hatpos:toggle)
+"""
+
