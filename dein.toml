@@ -256,3 +256,8 @@ nmap ;c <Plug>(caw:hatpos:toggle)
 vmap ;c <Plug>(caw:hatpos:toggle)
 """
 
+[[plugins]]
+repo = 'mattn/emmet-vim'
+hook_add = """
+"""
+
