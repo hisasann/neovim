@@ -211,42 +211,52 @@ repo = 'ryanoasis/vim-devicons'
 [[plugins]]
 repo = 'kristijanhusak/defx-icons'
 
-# https://github.com/prabirshrestha/vim-lsp
-# https://mattn.kaoriya.net/software/vim/20191231213507.htm
-# 何か要求されたら :LspInstallServer
-# gd で定義位置にジャンプ
-# gt で次のエラーにジャンプ
-# F2 でリネーム
 [[plugins]]
-repo = 'prabirshrestha/asyncomplete.vim'
-[[plugins]]
-repo = 'prabirshrestha/asyncomplete-lsp.vim'
-[[plugins]]
-repo = 'prabirshrestha/vim-lsp'
+repo = 'neovim/nvim-lspconfig'
 hook_add = """
-function! s:on_lsp_buffer_enabled() abort
-  setlocal omnifunc=lsp#complete
-  setlocal signcolumn=yes
-  nmap <buffer> gd <plug>(lsp-definition)
-  nmap <buffer> gt <plug>(lsp-next-error)
-  nmap <buffer> <f2> <plug>(lsp-rename)
-  inoremap <expr> <cr> pumvisible() ? "\<c-y>\<cr>" : "\<cr>"
-endfunction
+lua << EOF
+local nvim_lsp = require('lspconfig')
 
-augroup lsp_install
-  au!
-  autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
-augroup END
-command! LspDebug let lsp_log_verbose=1 | let lsp_log_file = expand('~/lsp.log')
+local on_attach = function(client, bufnr)
+  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+
+  local opts = { noremap=true, silent=true }
+
+  buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+end
+
+nvim_lsp.tsserver.setup {
+  on_attach = on_attach,
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx" }
+}
+EOF
 """
 [[plugins]]
-repo = 'mattn/vim-lsp-settings'
-[[plugins]]
-repo = 'mattn/vim-lsp-icons'
-[[plugins]]
-repo = 'hrsh7th/vim-vsnip'
-[[plugins]]
-repo = 'hrsh7th/vim-vsnip-integ'
+repo = 'glepnir/lspsaga.nvim'
+hook_add = """
+lua << EOF
+local saga = require 'lspsaga'
+
+saga.init_lsp_saga {
+  error_sign = '',
+  warn_sign = '',
+  hint_sign = '',
+  infor_sign = '',
+  border_style = "round",
+}
+EOF
+
+nnoremap <silent> ;gd <Cmd>Lspsaga preview_definition<CR>
+nnoremap <silent> ;gh <Cmd>Lspsaga lsp_finder<CR>
+nnoremap <silent> ca <Cmd>Lspsaga code_action<CR>
+vnoremap <silent> ca <Cmd><C-U>Lspsaga range_code_action<CR>
+nnoremap <silent> ;gs <Cmd>Lspsaga signature_help<CR>
+nnoremap <silent> <f2> <Cmd>Lspsaga rename<CR>
+nnoremap <silent> [e <Cmd>Lspsaga diagnostic_jump_next<CR>
+nnoremap <silent> ]e <Cmd>Lspsaga diagnostic_jump_prev<CR>
+nnoremap <silent>K <Cmd>Lspsaga hover_doc<CR>
+"""
 
 # caw comment out
 [[plugins]]
