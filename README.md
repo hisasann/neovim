@@ -42,6 +42,36 @@
 $ brew install neovim
 ```
 
+## neovim v0.5をインストールする
+
+すでに入っている場合は一度アンインストールしてからインストールします。
+
+```
+$ brew unlink neovim
+$ brew uninstall --force neovim
+$ brew install --HEAD neovim
+$ brew link neovim
+```
+
+Xcode のエラーが出た場合は以下を実行します。
+
+```
+$ sudo rm -rf /Library/Developer/CommandLineTools
+$ sudo xcode-select --install
+```
+
+まだ neovim を入れていない場合はこちら。
+
+```
+$ brew install --HEAD neovim
+```
+
+### Luaを学ぶ
+
+neovim の設定ファイルを **Lua** で書くことができるようになるので、これを気に勉強していこうと思います。
+
+[nvim-lua-guide-ja/README.ja.md at master · willelz/nvim-lua-guide-ja](https://github.com/willelz/nvim-lua-guide-ja/blob/master/README.ja.md)
+
 ## neovimのバージョンを確認する
 
 ```bash
@@ -101,11 +131,42 @@ $ sh ./installer.sh ~/.cache/dein
 :call dein#install()
 ```
 
-## coc.vimで困ったら
+## nvim-lspconfigで型チェック
+
+
+### Built-in commands
+
+* `:LspInfo` shows the status of active and configured language servers.
+
+The following support tab-completion for all arguments:
+
+* `:LspStart <config_name>` Start the requested server name. Will only succesfully start if the command detects a root directory matching the current config. Pass `autostart = false` to your `.setup{}` call for a language server if you would like to launch clients solely with this command. Defaults to all servers matching current buffer filetype.
+* `:LspStop <client_id>` Defaults to stopping all buffer clients.
+* `:LspRestart <client_id>` Defaults to restarting all buffer clients.
+
+[neovim/nvim-lspconfig: Quickstart configurations for the Nvim LSP client](https://github.com/neovim/nvim-lspconfig)
+
+### lspsaga.nvim
+
+coc.nvim ではできなかった Floating Window などを出すことができるので便利です。
+
+[glepnir/lspsaga.nvim: neovim lsp plugin](https://github.com/glepnir/lspsaga.nvim)
+
+### TypeScriptの型チェックをするために必要なこと
+
+`typescript typescript-language-server` がグローバルにインストールされていないと
 
 ```
-:call coc#util#install()
+client 1 quit with exit code 126 and signal 0
 ```
+
+のようなエラーメッセージがステータスバーに出てしまうのでインストールします。
+
+```
+npm i -g typescript typescript-language-server
+```
+
+[theia-ide/typescript-language-server: TypeScript & JavaScript Language Server](https://github.com/theia-ide/typescript-language-server)
 
 ## 参考記事
 
