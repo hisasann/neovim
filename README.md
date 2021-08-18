@@ -12,13 +12,13 @@
 
 [Shougo/defx.nvim: The dark powered file explorer implementation](https://github.com/Shougo/defx.nvim)
 
-[Shougo/denite.nvim: Dark powered asynchronous unite all interfaces for Neovim/Vim8](https://github.com/Shougo/denite.nvim)
-
 [jiangmiao/auto-pairs: Vim plugin, insert or delete brackets, parens, quotes in pair](https://github.com/jiangmiao/auto-pairs)
 
 [prabirshrestha/vim-lsp: async language server protocol plugin for vim and neovim](https://github.com/prabirshrestha/vim-lsp)
 
-[ggreer/the_silver_searcher: A code-searching tool similar to ack, but faster.](https://github.com/ggreer/the_silver_searcher)
+[BurntSushi/ripgrep: ripgrep recursively searches directories for a regex pattern while respecting your gitignore](https://github.com/BurntSushi/ripgrep#installation)
+
+`telescope.nvim` の `grep` 用のコマンド
 
 ## Shell setup
 
