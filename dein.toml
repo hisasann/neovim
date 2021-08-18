@@ -232,6 +232,7 @@ nvim_lsp.tsserver.setup {
 }
 EOF
 """
+
 [[plugins]]
 repo = 'glepnir/lspsaga.nvim'
 hook_add = """
