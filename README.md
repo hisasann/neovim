@@ -32,6 +32,8 @@
 
 [exa · a modern replacement for ls](https://the.exa.website/)
 
+[jesseduffield/lazygit: simple terminal UI for git commands](https://github.com/jesseduffield/lazygit)
+
 [hisasann/ide: tmux の画面分割いい感じにする shell](https://github.com/hisasann/ide)
 
 # neovimをセットアップする
