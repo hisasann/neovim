@@ -204,3 +204,6 @@ vmap ;c <Plug>(caw:hatpos:toggle)
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
+
+[[plugins]]
+repo = 'gelguy/wilder.nvim'
