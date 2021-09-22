@@ -220,3 +220,7 @@ repo = 'mattn/emmet-vim'
 
 [[plugins]]
 repo = 'gelguy/wilder.nvim'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
