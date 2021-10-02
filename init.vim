@@ -233,6 +233,13 @@ cmap <c-x> <c-r>=expand('%:p:h')<cr>/
 cmap <c-z> <c-r>=expand('%:p:r')<cr>
 " :cd <C-X> -> :cd /path/to/file/ になる
 
+" https://github.com/uhooi/dotfiles/blob/3faeacc294a0244c38ea4a1350d52ad0fe8b2674/.vim/config/mappings.vim#L28-L32
+" 貼り付け先のインデントに合わせてペーストする
+nnoremap p ]p
+nnoremap P ]P
+nnoremap ]p p
+nnoremap ]P P
+
 " }}}
 
 
