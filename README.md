@@ -6,7 +6,7 @@
 
 [hisasann/dotfile: 💻 my dotfiles [vim][tmux][zsh][fish]](https://github.com/hisasann/dotfile)
 
-## Vim setup
+## 使っているプラグインの一例
 
 [Shougo/dein.vim: Dark powered Vim/Neovim plugin manager](https://github.com/Shougo/dein.vim)
 
@@ -38,15 +38,19 @@
 
 # neovimをセットアップする
 
-## neovimをインストールする
+## neovim v0.4をインストールする
 
 ```bash
 $ brew install neovim
 ```
 
-## neovim v0.5をインストールする
+## neovim v0.5以上をインストールする
+
+lua に対応した版を使いたい場合はこちら。
 
 すでに入っている場合は一度アンインストールしてからインストールします。
+
+`unlink` からはじめていますが、 neovim を brew 経由で入れたことがない場合は `install` だけすればよいです。
 
 ```
 $ brew unlink neovim
@@ -70,7 +74,7 @@ $ brew install --HEAD neovim
 
 ### Luaを学ぶ
 
-neovim の設定ファイルを **Lua** で書くことができるようになるので、これを気に勉強していこうと思います。
+neovim の設定ファイルを **Lua** で書くことができるようになるので、Lua を学ぶなら以下の README を読みましょう。
 
 [nvim-lua-guide-ja/README.ja.md at master · willelz/nvim-lua-guide-ja](https://github.com/willelz/nvim-lua-guide-ja/blob/master/README.ja.md)
 
@@ -109,7 +113,17 @@ $ brew install python3
 $ pip3 install -U neovim
 ```
 
-もし、エラーが出てしまった場合は、エラー内容を解消し、以下を nvim に打ち込みます。
+`:echo has("python3")` を neovim 上で実行して `1` が返ってくれば `python3` が有効になっています。
+
+もし一向に `0` が返ってきてしまう場合は、
+
+```
+$ brew link --overwrite python@3.9
+```
+
+で `link` をし直すと直るかもしれません。
+
+defx.nvim などでエラーが出てしまった場合は、以下を neovim 上で実行すると直るかもしれません。
 
     :UpdateRemotePlugins
 
@@ -121,22 +135,29 @@ $ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh
 $ sh ./installer.sh ~/.cache/dein
 ```
 
-## dein.vimのキャッシュをクリアする
+### dein.vimのキャッシュをクリアする
 
 ```
 :call dein#recache_runtimepath()
 ```
 
-## dein.vimでモジュールたちをインストールする
+### dein.vimでモジュールたちをインストールする
 
 ```
 :call dein#install()
 ```
 
+### dein.vimのモジュールたちをアップデートする
+
+```
+:call dein#update()
+```
+
 ## nvim-lspconfigで型チェック
 
+### Built-inなcommandsたち
 
-### Built-in commands
+`lsp` の動きがあやしい場合は以下のコマンドでチェックすると良いかもしれません。
 
 * `:LspInfo` shows the status of active and configured language servers.
 
@@ -163,6 +184,10 @@ client 1 quit with exit code 126 and signal 0
 ```
 
 のようなエラーメッセージがステータスバーに出てしまうのでインストールします。
+
+また、`.node-version` などで node のバージョン管理をしている場合は複数の npm 環境に以下をインストールする必要があります。
+
+lsp がうまく動かない場合は、以下を打ち込むクセをつけましょう。
 
 ```
 npm i -g typescript typescript-language-server
