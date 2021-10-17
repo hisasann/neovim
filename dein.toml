@@ -90,10 +90,6 @@ nnoremap <silent>sf :<C-u>Defx -listed -resume
 nnoremap <silent>fi :<C-u>Defx -new `expand('%:p:h')` -search=`expand('%:p')`<CR>
 nnoremap <F3> :<C-u>Defx<CR>
 call defx#custom#option('_', {
-"  \ 'winwidth': 50,
-"  \ 'split': 'vertical',
-"  \ 'direction': 'topleft',
-"  \ 'buffer_name': 'exproler',
   \ 'toggle': 1,
   \ 'resume': 1,
   \ 'show_ignored_files': 1,
