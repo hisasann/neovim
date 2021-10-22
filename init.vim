@@ -235,10 +235,10 @@ cmap <c-z> <c-r>=expand('%:p:r')<cr>
 
 " 開いてるファイルの名前やパスをクリップボードにコピーする
 " https://newbedev.com/yank-file-name-path-of-current-buffer-in-vim
-" absolute path  (/something/src/foo.txt)
-nnoremap ,cf :let @*=expand("%:p")<CR>
 " relative path  (src/foo.txt)
-nnoremap ,cF :let @*=expand("%")<CR>
+nnoremap ,cf :let @*=expand("%")<CR>
+" absolute path  (/something/src/foo.txt)
+nnoremap ,cF :let @*=expand("%:p")<CR>
 " filename       (foo.txt)
 nnoremap ,ct :let @*=expand("%:t")<CR>
 " directory name (/something/src)
