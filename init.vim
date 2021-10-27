@@ -49,8 +49,8 @@ set ruler        " ルーラーを表示 (noruler:非表示)
 set clipboard+=unnamedplus
 set mouse=a
 
-" Insert Mode
-inoremap <silent> jj <ESC>:<C-u>w<CR>:" InsertMode抜けて保存
+" Insert Mode から抜けて保存までしちゃう
+inoremap <silent> jj <ESC>:<C-u>w<CR>
 
 " encode setting
 set encoding=UTF-8
