@@ -28,8 +28,7 @@ require('telescope').setup{
       '--with-filename',
       '--line-number',
       '--column',
-      '--smart-case',
-      '--hidden'
+      '--smart-case'
     },
     prompt_prefix = "🍜 ",
     selection_caret = "> ",
@@ -39,6 +38,11 @@ require('telescope').setup{
         ["q"] = actions.close
       },
     },
+  },
+  pickers = {
+    find_files = {
+      hidden = true
+    }
   }
 }
 EOF
