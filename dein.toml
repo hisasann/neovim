@@ -46,6 +46,15 @@ EOF
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+hook_add = """
+nnoremap [git]    <Nop>
+nmap     <Space>g [git]
+
+nnoremap <silent> [git]st  :Git status -sb<CR>
+nnoremap <silent> [git]d   :<C-u>Gdiff<CR>
+nnoremap <silent> [git]b   :Git blame<CR>
+nnoremap <silent> [git]h   :<C-u>GBrowse<CR>
+"""
 
 [[plugins]]
 # https://vi.stackexchange.com/questions/18265/getting-fugitive-no-gbrowse-handler-found
