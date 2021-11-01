@@ -20,6 +20,8 @@
 
 `telescope.nvim` の `grep` 用のコマンド
 
+**これを入れないと `:g` や `:s` が動かないので注意、過去何度もハマっている。**
+
 ## Shell setup
 
 [fish shell](https://fishshell.com/)
