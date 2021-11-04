@@ -1,4 +1,4 @@
-![screen shot](/images/screen-shot.png)
+<img width="1415" alt="_プロンプト___" src="https://user-images.githubusercontent.com/64143/140373864-f8f11924-7b3f-4605-91a9-801e493071cf.png">
 
 # hisasann's neovim settings
 
