@@ -218,3 +218,12 @@ defx.vim 公式の設定たちよ
 [defxを使ってみる - 環境構築・零](https://takkii.hatenablog.com/entry/2018/08/19/133847)
 
 [【vim】defx.nvimを設定！defx-git！defx-icon！](https://castleobj.com/defx/)
+
+## 🍟 Author
+
+- [github/hisasann](https://github.com/hisasann)
+- [twitter/hisasann](https://twitter.com/hisasann)
+
+## 🥫 License
+
+MIT © [hisasann (Yoshiyuki Hisamatsu)](https://github.com/hisasann)
