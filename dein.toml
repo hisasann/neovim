@@ -236,3 +236,9 @@ repo = 'gelguy/wilder.nvim'
 [[plugins]]
 repo = 'tpope/vim-surround'
 
+[[plugins]]
+repo = 'kdheepak/lazygit.nvim'
+hook_add = """
+nnoremap <silent> <Space>gg :LazyGit<CR>
+"""
+
