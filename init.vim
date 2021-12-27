@@ -61,7 +61,8 @@ set nobackup
 set noswapfile
 
 set background=dark
-colorscheme dracula
+colorscheme nightfox
+"colorscheme dracula
 
 " set title
 set title titlestring=%t%(\ %M%)%(\ (%{expand(\"%:~:.:h\")})%)%(\ %a%)

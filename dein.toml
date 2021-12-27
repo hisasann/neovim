@@ -75,7 +75,8 @@ depends = ['vim-airline-themes']
 repo = 'jiangmiao/auto-pairs'
 
 [[plugins]]
-repo = 'dracula/vim'
+repo = 'EdenEast/nightfox.nvim'
+#repo = 'dracula/vim'
 
 [[plugins]]
 repo = 'cespare/vim-toml'
