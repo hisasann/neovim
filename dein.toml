@@ -259,6 +259,9 @@ let g:ale_sign_error = 'P>'
 let g:ale_sign_warning = 'P-'
 let g:ale_echo_msg_format = '[%linter%] %code: %%s'
 let g:ale_statusline_format = ['E%d', 'W%d', 'OK']
+let g:ale_pattern_options = {
+\   '.*\.json$': {'ale_enabled': 0},
+\}
 
 nmap <silent> <C-w>j <Plug>(ale_next_wrap)
 nmap <silent> <C-w>k <Plug>(ale_previous_wrap)
