@@ -225,7 +225,7 @@ nnoremap <C-l> <C-w>l
 noremap x "_x
 
 " hogeファイル
-command! Hoge edit ~/Dropbox/hoge/hoge.markdown
+command! Hoge edit ~/_/hoge/hoge.markdown
 
 " https://mattn.kaoriya.net/software/vim/20071207013918.htm
 " expand path
