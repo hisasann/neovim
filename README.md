@@ -22,6 +22,8 @@
 
 **これを入れないと `:g` や `:s` が動かないので注意、過去何度もハマっている。**
 
+[Shougo/ddc.vim: Dark deno-powered completion framework for neovim/Vim8](https://github.com/Shougo/ddc.vim)
+
 ## Shell setup
 
 [fish shell](https://fishshell.com/)
@@ -197,6 +199,21 @@ npm i -g typescript typescript-language-server
 
 [theia-ide/typescript-language-server: TypeScript & JavaScript Language Server](https://github.com/theia-ide/typescript-language-server)
 
+## Shougo/ddc.vim
+
+[Shougo/ddc.vim: Dark deno-powered completion framework for neovim/Vim8](https://github.com/Shougo/ddc.vim)
+
+ddc.vim は **Deno** が必要なのでインストールする。
+
+[Deno - A modern runtime for JavaScript and TypeScript](https://deno.land/)
+
+```
+$ brew install deno
+```
+### nvim-cmpで保管する
+
+[hrsh7th/nvim-cmp: A completion plugin for neovim coded in Lua.](https://github.com/hrsh7th/nvim-cmp)
+
 ## 参考記事
 
 [Neovimのセットアップ方法(Mac) - Qiita](https://qiita.com/uhooi/items/8a023c24c004ec0c8b84)
@@ -204,6 +221,10 @@ npm i -g typescript typescript-language-server
 [はじめてのNeoVim（初期設定編） - Qiita](https://qiita.com/hisayuki/items/99ea1b667de71e908891)
 
 [MacでNeovimをPythonの開発環境にする](https://python.ms/neovim/)
+
+[新世代の自動補完プラグイン ddc.vim](https://zenn.dev/shougo/articles/ddc-vim-beta)
+
+[[第13回] Neovimのすゝめ – LSPをセットアップ（Builtin LSP編） │ wonwon eater](https://wonwon-eater.com/nvim-susume-builtin-lsp/#outline__5)
 
 ## defx.vim参考記事
 
