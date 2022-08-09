@@ -65,8 +65,17 @@ nnoremap <silent> [git]h   :<C-u>GBrowse<CR>
 repo = 'tpope/vim-rhubarb'
 
 [[plugins]]
-repo = 'vim-airline/vim-airline'
-depends = ['vim-airline-themes']
+repo = 'kyazdani42/nvim-web-devicons'
+
+[[plugins]]
+repo = 'nvim-lualine/lualine.nvim'
+depends = ['kyazdani42/nvim-web-devicons']
+hook_add = """
+lua << EOF
+require('lualine').setup()
+EOF
+"""
+
 
 [[plugins]]
 repo = 'jiangmiao/auto-pairs'
