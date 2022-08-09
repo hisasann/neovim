@@ -76,7 +76,6 @@ require('lualine').setup()
 EOF
 """
 
-
 [[plugins]]
 repo = 'jiangmiao/auto-pairs'
 
@@ -175,26 +174,6 @@ repo = 'ryanoasis/vim-devicons'
 [[plugins]]
 repo = 'kristijanhusak/defx-icons'
 
-[[plugins]]
-repo = 'glepnir/lspsaga.nvim'
-hook_add = """
-lua << EOF
-local saga = require 'lspsaga'
-
-saga.init_lsp_saga()
-EOF
-
-nnoremap <silent> ;gd <Cmd>Lspsaga preview_definition<CR>
-nnoremap <silent> ;gh <Cmd>Lspsaga lsp_finder<CR>
-nnoremap <silent> ca <Cmd>Lspsaga code_action<CR>
-vnoremap <silent> ca <Cmd><C-U>Lspsaga range_code_action<CR>
-nnoremap <silent> ;gs <Cmd>Lspsaga signature_help<CR>
-nnoremap <silent> <f2> <Cmd>Lspsaga rename<CR>
-nnoremap <silent> [e <Cmd>Lspsaga diagnostic_jump_next<CR>
-nnoremap <silent> ]e <Cmd>Lspsaga diagnostic_jump_prev<CR>
-nnoremap <silent>K <Cmd>Lspsaga hover_doc<CR>
-"""
-
 # caw comment out
 [[plugins]]
 repo = 'tyru/caw.vim'
@@ -250,6 +229,26 @@ let g:ale_javascript_prettier_options = '--single-quote --trailing-comma all'
 repo = 'vim-denops/denops.vim'
 
 [[plugins]]
+repo = 'glepnir/lspsaga.nvim'
+hook_add = """
+lua << EOF
+local saga = require 'lspsaga'
+
+saga.init_lsp_saga()
+EOF
+
+nnoremap <silent> ;gd <Cmd>Lspsaga preview_definition<CR>
+nnoremap <silent> ;gh <Cmd>Lspsaga lsp_finder<CR>
+nnoremap <silent> ca <Cmd>Lspsaga code_action<CR>
+vnoremap <silent> ca <Cmd><C-U>Lspsaga range_code_action<CR>
+nnoremap <silent> ;gs <Cmd>Lspsaga signature_help<CR>
+nnoremap <silent> <f2> <Cmd>Lspsaga rename<CR>
+nnoremap <silent> [e <Cmd>Lspsaga diagnostic_jump_next<CR>
+nnoremap <silent> ]e <Cmd>Lspsaga diagnostic_jump_prev<CR>
+nnoremap <silent>K <Cmd>Lspsaga hover_doc<CR>
+"""
+
+[[plugins]]
 repo = 'neovim/nvim-lspconfig'
 hook_add = """
 lua << EOF
@@ -285,6 +284,9 @@ lsp_installer.on_server_ready(function(server)
 end)
 EOF
 """
+
+[[plugins]]
+repo = 'onsails/lspkind-nvim'
 
 [[plugins]]
 repo = 'hrsh7th/cmp-nvim-lsp'
