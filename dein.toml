@@ -66,7 +66,6 @@ repo = 'tpope/vim-rhubarb'
 
 [[plugins]]
 repo = 'kyazdani42/nvim-web-devicons'
-
 [[plugins]]
 repo = 'nvim-lualine/lualine.nvim'
 depends = ['kyazdani42/nvim-web-devicons']
@@ -169,9 +168,6 @@ call defx#custom#column('git', 'indicators', {
 """
 
 [[plugins]]
-repo = 'ryanoasis/vim-devicons'
-
-[[plugins]]
 repo = 'kristijanhusak/defx-icons'
 
 # caw comment out
@@ -227,6 +223,9 @@ let g:ale_javascript_prettier_options = '--single-quote --trailing-comma all'
 
 [[plugins]]
 repo = 'vim-denops/denops.vim'
+
+[[plugins]]
+repo = 'L3MON4D3/LuaSnip'
 
 [[plugins]]
 repo = 'glepnir/lspsaga.nvim'
@@ -305,7 +304,7 @@ lua <<EOF
   cmp.setup({
     snippet = {
       expand = function(args)
-        vim.fn["vsnip#anonymous"](args.body)
+        require('luasnip').lsp_expand(args.body)
       end,
     },
     window = {
