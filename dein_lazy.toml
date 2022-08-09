@@ -3,10 +3,6 @@ repo = 'elzr/vim-json'
 on_ft = ['json']
 
 [[plugins]]
-repo = 'groenewege/vim-less'
-on_ft = ['less']
-
-[[plugins]]
 repo = 'stephpy/vim-yaml'
 on_ft = ['yaml']
 
@@ -17,22 +13,6 @@ on_ft = ['swift']
 [[plugins]]
 repo = 'digitaltoad/vim-jade'
 on_ft = ['jade']
-
-[[plugins]]
-repo = 'wavded/vim-stylus'
-on_ft = ['stylus']
-
-[[plugins]]
-repo = 'StanAngeloff/php.vim'
-on_ft = ['php']
-
-[[plugins]]
-repo = 'kchmck/vim-coffee-script'
-on_ft = ['coffee']
-
-[[plugins]]
-repo = 'dag/vim-fish'
-on_ft = ['fish']
 
 [[plugins]]
 repo = 'cespare/vim-toml'
