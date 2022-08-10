@@ -14,8 +14,6 @@ nnoremap <silent> ;e <cmd>Telescope oldfiles<cr>
 
 lua << EOF
 local actions = require('telescope.actions')
--- Global remapping
-------------------------------
 require('telescope').setup{
   defaults = {
     vimgrep_arguments = {
@@ -243,6 +241,8 @@ local on_attach = function(client, bufnr)
       callback = function() vim.lsp.buf.formatting_seq_sync() end
     })
   end
+
+  client.resolved_capabilities.document_formatting = false
 end
 
 protocol.CompletionItemKind = {
@@ -298,12 +298,10 @@ nvim_lsp.sumneko_lua.setup {
   settings = {
     Lua = {
       diagnostics = {
-        -- Get the language server to recognize the `vim` global
         globals = { 'vim' },
       },
 
       workspace = {
-        -- Make the server aware of Neovim runtime files
         library = vim.api.nvim_get_runtime_file("", true),
         checkThirdParty = false
       },
@@ -320,7 +318,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 }
 )
 
--- Diagnostic symbols in the sign column (gutter)
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
@@ -333,7 +330,7 @@ vim.diagnostic.config({
   },
   update_in_insert = true,
   float = {
-    source = "always", -- Or "if_many"
+    source = "always",
   },
 })
 EOF
@@ -520,6 +517,118 @@ EOF
 [[plugins]]
 repo = 'windwp/nvim-ts-autotag'
 hook_add = """
+lua <<EOF
+local status, autotag = pcall(require, "nvim-ts-autotag")
+if (not status) then return end
+autotag.setup({})
+EOF
+"""
+
+[[plugins]]
+repo = 'akinsho/nvim-bufferline.lua'
+hook_add = """
 lua << EOF
+local status, bufferline = pcall(require, "bufferline")
+if (not status) then return end
+
+bufferline.setup({
+  options = {
+    mode = "tabs",
+    separator_style = 'slant',
+    always_show_bufferline = true,
+    show_buffer_close_icons = true,
+    show_close_icon = true,
+    color_icons = true
+  },
+
+  highlights = {
+    separator = {
+      guifg = '#073642',
+      guibg = '#002b36',
+    },
+    separator_selected = {
+      guifg = '#073642',
+    },
+    background = {
+      guifg = '#657b83',
+      guibg = '#002b36'
+    },
+    buffer_selected = {
+      guifg = '#fdf6e3',
+      gui = "bold",
+    },
+    fill = {
+      guibg = '#073642'
+    }
+  },
+})
+
+vim.keymap.set('n', '<Tab>', '<Cmd>BufferLineCycleNext<CR>', {})
+vim.keymap.set('n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', {})
+EOF
+"""
+
+[[plugins]]
+repo = 'jose-elias-alvarez/null-ls.nvim'
+hook_add = """
+lua <<EOF
+local null_ls = require "null-ls"
+local formatting = null_ls.builtins.formatting
+local diagnostics = null_ls.builtins.diagnostics
+
+null_ls.setup({
+  sources = {
+    formatting.prettier.with {
+      prefer_local = "node_modules/.bin",
+    },
+    formatting.stylua,
+  },
+})
+EOF
+"""
+
+[[plugins]]
+repo = 'MunifTanjim/prettier.nvim'
+hook_add = """
+nnoremap <silent> ;a <cmd> :lua vim.lsp.buf.format({ async = true })<cr>
+
+lua <<EOF
+local status, prettier = pcall(require, "prettier")
+if (not status) then return end
+
+prettier.setup {
+  bin = 'prettierd',
+  filetypes = {
+    "css",
+    "graphql",
+    "html",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "less",
+    "markdown",
+    "scss",
+    "typescript",
+    "typescriptreact",
+    "yaml",
+  },
+
+  arrow_parens = "always",
+  bracket_spacing = true,
+  embedded_language_formatting = "auto",
+  end_of_line = "lf",
+  html_whitespace_sensitivity = "css",
+  jsx_bracket_same_line = false,
+  jsx_single_quote = false,
+  print_width = 80,
+  prose_wrap = "preserve",
+  quote_props = "as-needed",
+  semi = true,
+  single_quote = false,
+  tab_width = 2,
+  trailing_comma = "es5",
+  use_tabs = false,
+  vue_indent_script_and_style = false,
+}
 EOF
 """
