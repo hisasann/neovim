@@ -189,9 +189,6 @@ nnoremap <silent> <Space>gg :LazyGit<CR>
 """
 
 [[plugins]]
-repo = 'vim-denops/denops.vim'
-
-[[plugins]]
 repo = 'L3MON4D3/LuaSnip'
 
 [[plugins]]
