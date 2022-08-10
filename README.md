@@ -1,5 +1,7 @@
 <img width="1415" alt="neovim" src="https://user-images.githubusercontent.com/64143/140373864-f8f11924-7b3f-4605-91a9-801e493071cf.png">
 
+[How to my coding style using Neovim, tmux, iTerm2 with fish - YouTube](https://www.youtube.com/watch?v=gsc0Mw8y-cY)
+
 # My neovim settings
 
 ## Plugins
