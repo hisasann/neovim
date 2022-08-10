@@ -1,60 +1,63 @@
-<img width="1415" alt="_プロンプト___" src="https://user-images.githubusercontent.com/64143/140373864-f8f11924-7b3f-4605-91a9-801e493071cf.png">
+<img width="1415" alt="neovim" src="https://user-images.githubusercontent.com/64143/140373864-f8f11924-7b3f-4605-91a9-801e493071cf.png">
 
-# hisasann's neovim settings
+# My neovim settings
 
-## dotfiles
+## Plugins
 
-[hisasann/dotfile: 💻 my dotfiles [vim][tmux][zsh][fish]](https://github.com/hisasann/dotfile)
-
-## 使っているプラグインの一例
-
-[Shougo/dein.vim: Dark powered Vim/Neovim plugin manager](https://github.com/Shougo/dein.vim)
-
-[Shougo/defx.nvim: The dark powered file explorer implementation](https://github.com/Shougo/defx.nvim)
-
-[jiangmiao/auto-pairs: Vim plugin, insert or delete brackets, parens, quotes in pair](https://github.com/jiangmiao/auto-pairs)
-
-[prabirshrestha/vim-lsp: async language server protocol plugin for vim and neovim](https://github.com/prabirshrestha/vim-lsp)
-
-[BurntSushi/ripgrep: ripgrep recursively searches directories for a regex pattern while respecting your gitignore](https://github.com/BurntSushi/ripgrep#installation)
-
-`telescope.nvim` の `grep` 用のコマンド
-
-**これを入れないと `:g` や `:s` が動かないので注意、過去何度もハマっている。**
-
-[Shougo/ddc.vim: Dark deno-powered completion framework for neovim/Vim8](https://github.com/Shougo/ddc.vim)
-
+* [Shougo/dein.vim: Dark powered Vim/Neovim plugin manager](https://github.com/Shougo/dein.vim) - plugin manager
+* [Shougo/defx.nvim: The dark powered file explorer implementation](https://github.com/Shougo/defx.nvim) - filer
+* [nvim-telescope/telescope.nvim: Find, Filter, Preview, Pick. All lua, all the time.](https://github.com/nvim-telescope/telescope.nvim)
+  * [BurntSushi/ripgrep: ripgrep recursively searches directories for a regex pattern while respecting your gitignore](https://github.com/BurntSushi/ripgrep#installation) - for telescope.nvim grep command, Required for :g :s
+* [tpope/vim-fugitive: fugitive.vim: A Git wrapper so awesome, it should be illegal](https://github.com/tpope/vim-fugitive) - git
+* [nvim-lualine/lualine.nvim: A blazing fast and easy to configure neovim statusline plugin written in pure lua.](https://github.com/nvim-lualine/lualine.nvim)
+* [L3MON4D3/LuaSnip: Snippet Engine for Neovim written in Lua.](https://github.com/L3MON4D3/LuaSnip)
+* [windwp/nvim-autopairs: autopairs for neovim written by lua](https://github.com/windwp/nvim-autopairs)
+* [onsails/lspkind.nvim: vscode-like pictograms for neovim lsp completion items](https://github.com/onsails/lspkind.nvim)
+* [windwp/nvim-ts-autotag: Use treesitter to auto close and auto rename html tag](https://github.com/windwp/nvim-ts-autotag)
+* [windwp/nvim-autopairs: autopairs for neovim written by lua](https://github.com/windwp/nvim-autopairs)
+* [nvim-treesitter/nvim-treesitter: Nvim Treesitter configurations and abstraction layer](https://github.com/nvim-treesitter/nvim-treesitter)
+  * `brew install tree-sitter`
+* [akinsho/bufferline.nvim: A snazzy bufferline for Neovim](https://github.com/akinsho/bufferline.nvim)
+* [tpope/vim-surround: surround.vim: Delete/change/add parentheses/quotes/XML-tags/much more with ease](https://github.com/tpope/vim-surround)
+* [neovim/nvim-lspconfig: Quickstart configs for Nvim LSP](https://github.com/neovim/nvim-lspconfig) - TypeScript
+  * [glepnir/lspsaga.nvim: neovim lsp plugin](https://github.com/glepnir/lspsaga.nvim)
+  * [williamboman/nvim-lsp-installer: Neovim plugin that allow you to seamlessly manage LSP servers with :LspInstall. With full Windows support! Further development has moved to https://github.com/williamboman/mason.nvim!](https://github.com/williamboman/nvim-lsp-installer)
+* [hrsh7th/nvim-cmp: A completion plugin for neovim coded in Lua.](https://github.com/hrsh7th/nvim-cmp) - IntelliSense
+* [jose-elias-alvarez/null-ls.nvim: Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua.](https://github.com/jose-elias-alvarez/null-ls.nvim) - formatter
+  * [MunifTanjim/prettier.nvim: Prettier plugin for Neovim's built-in LSP client.](https://github.com/MunifTanjim/prettier.nvim)
+  * [fsouza/prettierd: prettier, as a daemon, for ludicrous formatting speed.](https://github.com/fsouza/prettierd)
+    * `npm install -g @fsouza/prettierd`
+    * Execute formatting `;a`
+ 
 ## Shell setup
 
-[fish shell](https://fishshell.com/)
+### Dotfiles
 
-[jorgebucaran/fisher: A plugin manager for Fish.](https://github.com/jorgebucaran/fisher)
+[hisasann/dotfile](https://github.com/hisasann/dotfile)
 
-[ryanoasis/nerd-fonts: Iconic font aggregator, collection, & patcher. 3,600+ icons, 50+ patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, & more](https://github.com/ryanoasis/nerd-fonts)
+* [fish shell](https://fishshell.com/)
+  * [jorgebucaran/fisher: A plugin manager for Fish.](https://github.com/jorgebucaran/fisher)
+* [ryanoasis/nerd-fonts: Iconic font aggregator, collection, & patcher. 3,600+ icons, 50+ patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, & more](https://github.com/ryanoasis/nerd-fonts)
+* [jethrokuan/z: Pure-fish z directory jumping](https://github.com/jethrokuan/z)
+* [exa · a modern replacement for ls](https://the.exa.website/) - Awesome ls command
+* [jesseduffield/lazygit: simple terminal UI for git commands](https://github.com/jesseduffield/lazygit)
+* [hisasann/ide](https://github.com/hisasann/ide) - tmux の画面分割いい感じにする shell
 
-[jethrokuan/z: Pure-fish z directory jumping](https://github.com/jethrokuan/z)
+# Neovim setup
 
-[exa · a modern replacement for ls](https://the.exa.website/)
-
-[jesseduffield/lazygit: simple terminal UI for git commands](https://github.com/jesseduffield/lazygit)
-
-[hisasann/ide: tmux の画面分割いい感じにする shell](https://github.com/hisasann/ide)
-
-# neovimをセットアップする
-
-## neovim v0.4をインストールする
+## Install Neovim
 
 ```bash
 $ brew install neovim
 ```
 
-## neovim v0.5以上をインストールする
+## Install Neovim v0.5 or higher
 
-lua に対応した版を使いたい場合はこちら。
+If you want to use the version that supports lua, click here.
 
-すでに入っている場合は一度アンインストールしてからインストールします。
+If it is already included, uninstall it and then install it.
 
-`unlink` からはじめていますが、 neovim を brew 経由で入れたことがない場合は `install` だけすればよいです。
+We start with `unlink`, but if you have never installed neovim via brew, you only need to `install`.
 
 ```
 $ brew unlink neovim
@@ -63,40 +66,34 @@ $ brew install --HEAD neovim
 $ brew link neovim
 ```
 
-Xcode のエラーが出た場合は以下を実行します。
+If you get an Xcode error, do the following
 
 ```
 $ sudo rm -rf /Library/Developer/CommandLineTools
 $ sudo xcode-select --install
 ```
 
-まだ neovim を入れていない場合はこちら。
+If you have not yet installed neovim, run this command.
 
 ```
 $ brew install --HEAD neovim
 ```
 
-### Luaを学ぶ
+### Learn Lua
 
-neovim の設定ファイルを **Lua** で書くことができるようになるので、Lua を学ぶなら以下の README を読みましょう。
+If you want to learn Lua, read the following README, as you will be able to write neovim configuration files in **Lua**.
 
 [nvim-lua-guide-ja/README.ja.md at master · willelz/nvim-lua-guide-ja](https://github.com/willelz/nvim-lua-guide-ja/blob/master/README.ja.md)
 
-## neovimのバージョンを確認する
+## Place Neovim configuration files
 
-```bash
-$ nvim -v
-```
-
-## neovimの設定ファイルを配置する
-
-以下のディレクトリがなければ作成します。
+If the following directories do not exist, create them.
 
 ```bash
 $ mkdir ~/.config/nvim
 ```
 
-[hisasann/neovim](https://github.com/hisasann/neovim) を clone したディレクトリに移動した以下を実行します。
+Clone [hisasann/neovim](https://github.com/hisasann/neovim) and execute the following once you are in that directory.
 
 ```bash
 $ ln -fs "$PWD/init.vim" ~/.config/nvim/init.vim
@@ -104,34 +101,11 @@ $ ln -fs "$PWD/dein.toml" ~/.config/nvim/dein.toml
 $ ln -fs "$PWD/dein_lazy.toml" ~/.config/nvim/dein_lazy.toml
 ```
 
-## python3をインストールする
-
-[Shougo/deoplete.nvim: Dark powered asynchronous completion framework for neovim/Vim8](https://github.com/Shougo/deoplete.nvim)
-
-は python3 が必要になるので、ここでインストールしておきます。
-
-    [deoplete] deoplete requires Python3 support("+python3").
-
-```bash
-$ brew install python3
-$ pip3 install -U neovim
-```
-
-`:echo has("python3")` を neovim 上で実行して `1` が返ってくれば `python3` が有効になっています。
-
-もし一向に `0` が返ってきてしまう場合は、
-
-```
-$ brew link --overwrite python@3.9
-```
-
-で `link` をし直すと直るかもしれません。
-
-defx.nvim などでエラーが出てしまった場合は、以下を neovim 上で実行すると直るかもしれません。
+If you get an error with defx.nvim, etc., running the following on neovim may fix the problem.
 
     :UpdateRemotePlugins
 
-## dein.vimをインストールする
+## Install dein.vim
 
 ```bash
 $ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
@@ -139,29 +113,29 @@ $ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh
 $ sh ./installer.sh ~/.cache/dein
 ```
 
-### dein.vimのキャッシュをクリアする
+### To clear the cache of dein.vim
 
 ```
 :call dein#recache_runtimepath()
 ```
 
-### dein.vimでモジュールたちをインストールする
+### To install modules with dein.vim
 
 ```
 :call dein#install()
 ```
 
-### dein.vimのモジュールたちをアップデートする
+### To update dein.vim modules
 
 ```
 :call dein#update()
 ```
 
-## nvim-lspconfigで型チェック
+## Type checking with nvim-lspconfig
 
-### Built-inなcommandsたち
+### Built-in commands
 
-`lsp` の動きがあやしい場合は以下のコマンドでチェックすると良いかもしれません。
+If `lsp` is not working properly, you may want to check with the following command.
 
 * `:LspInfo` shows the status of active and configured language servers.
 
@@ -175,23 +149,24 @@ The following support tab-completion for all arguments:
 
 ### lspsaga.nvim
 
-coc.nvim ではできなかった Floating Window などを出すことができるので便利です。
+This is useful because it can produce floating windows, etc., which was not possible with coc.nvim.
 
 [glepnir/lspsaga.nvim: neovim lsp plugin](https://github.com/glepnir/lspsaga.nvim)
 
-### TypeScriptの型チェックをするために必要なこと
+### What is required for TypeScript type checking.
 
-`typescript typescript-language-server` がグローバルにインストールされていないと
+If `typescript typescript-language-server` is not installed globally, then
 
 ```
 client 1 quit with exit code 126 and signal 0
+If not, you will get error messages like
 ```
 
-のようなエラーメッセージがステータスバーに出てしまうのでインストールします。
+error message will appear in the status bar.
 
-また、`.node-version` などで node のバージョン管理をしている場合は複数の npm 環境に以下をインストールする必要があります。
+Also, if you are using `.node-version` or other node version control, you will need to install the following in multiple npm environments.
 
-lsp がうまく動かない場合は、以下を打ち込むクセをつけましょう。
+If lsp does not work properly, make a habit of typing
 
 ```
 npm i -g typescript typescript-language-server
@@ -199,22 +174,7 @@ npm i -g typescript typescript-language-server
 
 [theia-ide/typescript-language-server: TypeScript & JavaScript Language Server](https://github.com/theia-ide/typescript-language-server)
 
-## Shougo/ddc.vim
-
-[Shougo/ddc.vim: Dark deno-powered completion framework for neovim/Vim8](https://github.com/Shougo/ddc.vim)
-
-ddc.vim は **Deno** が必要なのでインストールする。
-
-[Deno - A modern runtime for JavaScript and TypeScript](https://deno.land/)
-
-```
-$ brew install deno
-```
-### nvim-cmpで保管する
-
-[hrsh7th/nvim-cmp: A completion plugin for neovim coded in Lua.](https://github.com/hrsh7th/nvim-cmp)
-
-## 参考記事
+## Reference article
 
 [Neovimのセットアップ方法(Mac) - Qiita](https://qiita.com/uhooi/items/8a023c24c004ec0c8b84)
 
@@ -225,20 +185,6 @@ $ brew install deno
 [新世代の自動補完プラグイン ddc.vim](https://zenn.dev/shougo/articles/ddc-vim-beta)
 
 [[第13回] Neovimのすゝめ – LSPをセットアップ（Builtin LSP編） │ wonwon eater](https://wonwon-eater.com/nvim-susume-builtin-lsp/#outline__5)
-
-## defx.vim参考記事
-
-defx.vim 公式の設定たちよ
-
-[defx.nvim/defx.txt at master · Shougo/defx.nvim](https://github.com/Shougo/defx.nvim/blob/master/doc/defx.txt)
-
-[Defx.nvim を使う! | 完成形で未完成](https://tech.39.gy/terminal/defx/)
-
-[【Vim】defx.nvimで高速でリッチなファイラを実現する(アイコン、git status表示) - Qiita](https://qiita.com/arks22/items/9688ec7f4cb43444e9d9)
-
-[defxを使ってみる - 環境構築・零](https://takkii.hatenablog.com/entry/2018/08/19/133847)
-
-[【vim】defx.nvimを設定！defx-git！defx-icon！](https://castleobj.com/defx/)
 
 ## 🍟 Author
 
