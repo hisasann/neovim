@@ -83,13 +83,13 @@ If you have not yet installed neovim, run this command.
 $ brew install --HEAD neovim
 ```
 
-### For init.lua configuration files
+## For init.lua configuration files
 
 ```bash
 git clone git@github.com:hisasann/neovim.git ~/.config/nvim
 ```
 
-### [Old style]For init.vim configuration files
+### [Legacy]For init.vim configuration files
 
 If the following directories do not exist, create them.
 
@@ -110,7 +110,7 @@ If you get an error with defx.nvim, etc., running the following on neovim may fi
 
     :UpdateRemotePlugins
 
-## [For init.vim]Install dein.vim
+### [For init.vim]Install dein.vim
 
 ```bash
 $ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
@@ -118,19 +118,19 @@ $ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh
 $ sh ./installer.sh ~/.cache/dein
 ```
 
-### To clear the cache of dein.vim
+To clear the cache of dein.vim
 
 ```
 :call dein#recache_runtimepath()
 ```
 
-### To install modules with dein.vim
+To install modules with dein.vim
 
 ```
 :call dein#install()
 ```
 
-### To update dein.vim modules
+To update dein.vim modules
 
 ```
 :call dein#update()
