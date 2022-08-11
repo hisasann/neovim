@@ -83,20 +83,6 @@ If you have not yet installed neovim, run this command.
 $ brew install --HEAD neovim
 ```
 
-### Learn Lua
-
-If you want to learn Lua, read the following README, as you will be able to write neovim configuration files in **Lua**.
-
-[nvim-lua-guide-ja/README.ja.md at master · willelz/nvim-lua-guide-ja](https://github.com/willelz/nvim-lua-guide-ja/blob/master/README.ja.md)
-
-## Place Neovim configuration files
-
-If the following directories do not exist, create them.
-
-```bash
-$ mkdir ~/.config/nvim
-```
-
 ### For init.lua configuration files
 
 ```bash
@@ -104,6 +90,12 @@ git clone git@github.com:hisasann/neovim.git ~/.config/nvim
 ```
 
 ### [Old style]For init.vim configuration files
+
+If the following directories do not exist, create them.
+
+```bash
+$ mkdir ~/.config/nvim
+```
 
 Clone [hisasann/neovim](https://github.com/hisasann/neovim) and execute the following once you are in that directory.
 
@@ -186,6 +178,12 @@ npm i -g typescript typescript-language-server
 ```
 
 [theia-ide/typescript-language-server: TypeScript & JavaScript Language Server](https://github.com/theia-ide/typescript-language-server)
+
+### Learn Lua
+
+If you want to learn Lua, read the following README, as you will be able to write neovim configuration files in **Lua**.
+
+[nvim-lua-guide-ja/README.ja.md at master · willelz/nvim-lua-guide-ja](https://github.com/willelz/nvim-lua-guide-ja/blob/master/README.ja.md)
 
 ## 🍟 Author
 
