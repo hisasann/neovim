@@ -8,6 +8,7 @@
 
 * [wbthomason/packer.nvim: A use-package inspired plugin manager for Neovim. Uses native packages, supports Luarocks dependencies, written in Lua, allows for expressive config](https://github.com/wbthomason/packer.nvim)
 * [nvim-telescope/telescope.nvim: Find, Filter, Preview, Pick. All lua, all the time.](https://github.com/nvim-telescope/telescope.nvim)
+  * [nvim-telescope/telescope-file-browser.nvim: File Browser extension for telescope.nvim](https://github.com/nvim-telescope/telescope-file-browser.nvim)
 * [nvim-lualine/lualine.nvim: A blazing fast and easy to configure neovim statusline plugin written in pure lua.](https://github.com/nvim-lualine/lualine.nvim)
 * [L3MON4D3/LuaSnip: Snippet Engine for Neovim written in Lua.](https://github.com/L3MON4D3/LuaSnip)
 * [windwp/nvim-autopairs: autopairs for neovim written by lua](https://github.com/windwp/nvim-autopairs)
@@ -20,6 +21,7 @@
 * [neovim/nvim-lspconfig: Quickstart configs for Nvim LSP](https://github.com/neovim/nvim-lspconfig) - TypeScript
   * [glepnir/lspsaga.nvim: neovim lsp plugin](https://github.com/glepnir/lspsaga.nvim)
   * [williamboman/nvim-lsp-installer: Neovim plugin that allow you to seamlessly manage LSP servers with :LspInstall. With full Windows support! Further development has moved to https://github.com/williamboman/mason.nvim!](https://github.com/williamboman/nvim-lsp-installer)
+    * `npm install -g typescript typescript-language-server`
   * [sumneko/lua-language-server: A language server that offers Lua language support - programmed in Lua](https://github.com/sumneko/lua-language-server)
     * `brew install lua-language-server`
 * [hrsh7th/nvim-cmp: A completion plugin for neovim coded in Lua.](https://github.com/hrsh7th/nvim-cmp) - IntelliSense
@@ -27,6 +29,8 @@
   * [MunifTanjim/prettier.nvim: Prettier plugin for Neovim's built-in LSP client.](https://github.com/MunifTanjim/prettier.nvim)
   * [fsouza/prettierd: prettier, as a daemon, for ludicrous formatting speed.](https://github.com/fsouza/prettierd)
     * `npm install -g @fsouza/prettierd`
+  * [JohnnyMorganz/StyLua: An opinionated Lua code formatter](https://github.com/JohnnyMorganz/StyLua)
+    * `cargo install stylua`
     * Execute formatting `;a`
  
 ## Shell setup
@@ -93,9 +97,18 @@ If the following directories do not exist, create them.
 $ mkdir ~/.config/nvim
 ```
 
+### For init.lua configuration files
+
+```bash
+git clone git@github.com:hisasann/neovim.git ~/.config/nvim
+```
+
+### [Old style]For init.vim configuration files
+
 Clone [hisasann/neovim](https://github.com/hisasann/neovim) and execute the following once you are in that directory.
 
 ```bash
+$ cd vim
 $ ln -fs "$PWD/init.vim" ~/.config/nvim/init.vim
 $ ln -fs "$PWD/dein.toml" ~/.config/nvim/dein.toml
 $ ln -fs "$PWD/dein_lazy.toml" ~/.config/nvim/dein_lazy.toml
@@ -105,7 +118,7 @@ If you get an error with defx.nvim, etc., running the following on neovim may fi
 
     :UpdateRemotePlugins
 
-## Install dein.vim
+## [For init.vim]Install dein.vim
 
 ```bash
 $ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
@@ -173,18 +186,6 @@ npm i -g typescript typescript-language-server
 ```
 
 [theia-ide/typescript-language-server: TypeScript & JavaScript Language Server](https://github.com/theia-ide/typescript-language-server)
-
-## Reference article
-
-[Neovimのセットアップ方法(Mac) - Qiita](https://qiita.com/uhooi/items/8a023c24c004ec0c8b84)
-
-[はじめてのNeoVim（初期設定編） - Qiita](https://qiita.com/hisayuki/items/99ea1b667de71e908891)
-
-[MacでNeovimをPythonの開発環境にする](https://python.ms/neovim/)
-
-[新世代の自動補完プラグイン ddc.vim](https://zenn.dev/shougo/articles/ddc-vim-beta)
-
-[[第13回] Neovimのすゝめ – LSPをセットアップ（Builtin LSP編） │ wonwon eater](https://wonwon-eater.com/nvim-susume-builtin-lsp/#outline__5)
 
 ## 🍟 Author
 
