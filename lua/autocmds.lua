@@ -12,3 +12,11 @@ autocmd("BufEnter", {
 	pattern = "*",
 	command = "set fo-=c fo-=r fo-=o",
 })
+
+-- Restore cursor location when file is opened
+autocmd({ "BufReadPost" }, {
+	pattern = { "*" },
+	callback = function()
+		vim.api.nvim_exec('silent! normal! g`"zv', false)
+	end,
+})
