@@ -188,6 +188,8 @@ If you want to learn Lua, read the following README, as you will be able to writ
 
 [nvim-lua-guide-ja/README.ja.md at master · willelz/nvim-lua-guide-ja](https://github.com/willelz/nvim-lua-guide-ja/blob/master/README.ja.md)
 
+## [VimコマンドやTipsをまとめてみたよ！](https://github.com/hisasann/dotfile/wiki)
+
 ## 🍟 Author
 
 - [github/hisasann](https://github.com/hisasann)
