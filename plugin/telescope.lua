@@ -22,7 +22,7 @@ telescope.setup({
 			},
 		},
 
-		file_ignore_patterns = { "node_modules", ".git" },
+		file_ignore_patterns = { "node_modules", ".git", ".idea" },
 	},
 	extensions = {
 		file_browser = {
