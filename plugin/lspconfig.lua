@@ -28,16 +28,14 @@ local on_attach = function(client, bufnr)
 	-- Lspsaga の方を使うのでここはコメントアウト
 	--buf_set_keymap("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
 
-	-- formatting
-	if client.server_capabilities.documentFormattingProvider then
-		vim.api.nvim_create_autocmd("BufWritePre", {
-			group = vim.api.nvim_create_augroup("Format", { clear = true }),
-			buffer = bufnr,
-			callback = function()
-				vim.lsp.buf.formatting_seq_sync()
-			end,
-		})
-	end
+  -- formatting
+  if client.server_capabilities.documentFormattingProvider then
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      group = vim.api.nvim_create_augroup("Format", { clear = true }),
+      buffer = bufnr,
+      callback = function() vim.lsp.buf.format() end
+    })
+  end
 
 	-- To send formatted stream to null-ls
 	--client.resolved_capabilities.document_formatting = false
@@ -72,7 +70,7 @@ protocol.CompletionItemKind = {
 }
 
 -- Set up completion using nvim_cmp with LSP source
-local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 nvim_lsp.flow.setup({
 	on_attach = on_attach,

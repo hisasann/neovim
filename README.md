@@ -17,7 +17,6 @@
 * [windwp/nvim-autopairs: autopairs for neovim written by lua](https://github.com/windwp/nvim-autopairs)
 * [onsails/lspkind.nvim: vscode-like pictograms for neovim lsp completion items](https://github.com/onsails/lspkind.nvim)
 * [windwp/nvim-ts-autotag: Use treesitter to auto close and auto rename html tag](https://github.com/windwp/nvim-ts-autotag)
-* [windwp/nvim-autopairs: autopairs for neovim written by lua](https://github.com/windwp/nvim-autopairs)
 * [nvim-treesitter/nvim-treesitter: Nvim Treesitter configurations and abstraction layer](https://github.com/nvim-treesitter/nvim-treesitter)
   * `brew install tree-sitter`
 * [akinsho/bufferline.nvim: A snazzy bufferline for Neovim](https://github.com/akinsho/bufferline.nvim)

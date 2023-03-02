@@ -270,9 +270,7 @@ protocol.CompletionItemKind = {
   '', -- TypeParameter
 }
 
-local capabilities = require('cmp_nvim_lsp').update_capabilities(
-  vim.lsp.protocol.make_client_capabilities()
-)
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 nvim_lsp.flow.setup {
   on_attach = on_attach,
@@ -341,7 +339,7 @@ lua << EOF
 local lsp_installer = require("nvim-lsp-installer")
 lsp_installer.on_server_ready(function(server)
     local opts = {}
-    opts.capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+    opts.capabilities = require('cmp_nvim_lsp').default_capabilities()
     server:setup(opts)
     vim.cmd [[ do User LspAttachBuffers ]]
 end)
@@ -453,7 +451,7 @@ cmp.setup.cmdline(':', {
   })
 })
 
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 require('lspconfig')['tsserver'].setup {
   capabilities = capabilities
 }
@@ -540,22 +538,22 @@ bufferline.setup({
 
   highlights = {
     separator = {
-      guifg = '#073642',
-      guibg = '#002b36',
+      fg = '#073642',
+      bg = '#002b36',
     },
     separator_selected = {
-      guifg = '#073642',
+      fg = '#073642',
     },
     background = {
-      guifg = '#657b83',
-      guibg = '#002b36'
+      fg = '#657b83',
+      bg = '#002b36'
     },
     buffer_selected = {
-      guifg = '#fdf6e3',
+      fg = '#fdf6e3',
       gui = "bold",
     },
     fill = {
-      guibg = '#073642'
+      bg = '#073642'
     }
   },
 })
