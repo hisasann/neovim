@@ -82,6 +82,7 @@ return packer.startup(function(use)
   -- Treesitter
   use({ "nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" } })
   use({ "nvim-telescope/telescope-file-browser.nvim" })
+  use({ "mrjones2014/nvim-ts-rainbow" })
 
   use({ "windwp/nvim-ts-autotag" })
 
