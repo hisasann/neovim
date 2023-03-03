@@ -84,6 +84,9 @@ return packer.startup(function(use)
   use({ "nvim-telescope/telescope-file-browser.nvim" })
   use({ "mrjones2014/nvim-ts-rainbow" })
 
+  -- VSCode like にする
+  use "lukas-reineke/indent-blankline.nvim"
+
   use({ "windwp/nvim-ts-autotag" })
 
   use {
