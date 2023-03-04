@@ -35,6 +35,9 @@
   - [JohnnyMorganz/StyLua: An opinionated Lua code formatter](https://github.com/JohnnyMorganz/StyLua)
     - `cargo install stylua`
     - Execute formatting `;a`
+- [lukas-reineke/indent-blankline.nvim: Indent guides for Neovim](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [mrjones2014/nvim-ts-rainbow: Rainbow parentheses for neovim using tree-sitter.](https://github.com/mrjones2014/nvim-ts-rainbow)
+- [folke/zen-mode.nvim: 🧘 Distraction-free coding for Neovim](https://github.com/folke/zen-mode.nvim)
 
 ## Shell setup
 
