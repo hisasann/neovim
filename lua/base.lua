@@ -9,7 +9,13 @@ vim.api.nvim_create_user_command("Hoge", function(opts)
   vim.cmd("e " .. "~/_/hoge/hoge.markdown")
 end, {})
 
+-- for notion dialy
 -- remove return
-vim.api.nvim_create_user_command("NN", function(opts)
+vim.api.nvim_create_user_command("M", function(opts)
   vim.cmd(":%s/\\%(.\\)\\@<!\\n//ig")
+end, {})
+
+-- remove markdown link
+vim.api.nvim_create_user_command("L", function(opts)
+  vim.cmd(":%s/\\!\\[.*\\]\\(.*\\)\\n//ig")
 end, {})
