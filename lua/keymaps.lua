@@ -81,4 +81,3 @@ keymap("v", "<C-p>", '"0p', opts)
 
 -- テキスト全てを削除する
 keymap("n", "<Space>a", "gg<S-v>Gd", opts)
-
