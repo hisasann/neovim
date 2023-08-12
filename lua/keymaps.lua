@@ -78,3 +78,7 @@ keymap("v", "v", "$h", opts)
 
 -- 0番レジスタを使いやすくした
 keymap("v", "<C-p>", '"0p', opts)
+
+-- テキスト全てを削除する
+keymap("n", "<Space>a", "gg<S-v>Gd", opts)
+
