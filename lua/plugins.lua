@@ -82,7 +82,6 @@ return packer.startup(function(use)
   -- Treesitter
   use({ "nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" } })
   use({ "nvim-telescope/telescope-file-browser.nvim" })
-  use({ "mrjones2014/nvim-ts-rainbow" })
 
   -- VSCode like にする
   use "lukas-reineke/indent-blankline.nvim"
@@ -99,6 +98,8 @@ return packer.startup(function(use)
       }
     end
   }
+
+  use({ "github/copilot.vim" })
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
