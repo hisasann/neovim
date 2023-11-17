@@ -41,6 +41,8 @@
 - [lukas-reineke/indent-blankline.nvim: Indent guides for Neovim](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [mrjones2014/nvim-ts-rainbow: Rainbow parentheses for neovim using tree-sitter.](https://github.com/mrjones2014/nvim-ts-rainbow)
 - [folke/zen-mode.nvim: 🧘 Distraction-free coding for Neovim](https://github.com/folke/zen-mode.nvim)
+- [rcarriga/nvim-notify: A fancy, configurable, notification manager for NeoVim](https://github.com/rcarriga/nvim-notify)
+    - require("notify")("My super important message")
 
 ## Shell setup
 
