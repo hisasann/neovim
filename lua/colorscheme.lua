@@ -1,8 +1,8 @@
-vim.cmd [[
+vim.cmd([[
 try
-  colorscheme tokyonight
+  colorscheme solarized-osaka
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark
 endtry
-]]
+]])

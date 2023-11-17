@@ -199,6 +199,11 @@ _G.packer_plugins = {
     path = "/Users/hisasann/.local/share/nvim/site/pack/packer/start/prettier.nvim",
     url = "https://github.com/MunifTanjim/prettier.nvim"
   },
+  ["solarized-osaka.nvim"] = {
+    loaded = true,
+    path = "/Users/hisasann/.local/share/nvim/site/pack/packer/start/solarized-osaka.nvim",
+    url = "https://github.com/craftzdog/solarized-osaka.nvim"
+  },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
     path = "/Users/hisasann/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
