@@ -10,5 +10,6 @@ null_ls.setup({
       prefer_local = "node_modules/.bin",
     },
     formatting.stylua,
+    formatting.goimports,
   },
 })

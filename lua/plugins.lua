@@ -68,21 +68,11 @@ return packer.startup(function(use)
 	-- snippets
 	use({ "L3MON4D3/LuaSnip" }) --snippet engine
 
-	-- LSP
-	use({ "neovim/nvim-lspconfig" }) -- enable LSP
-	use({ "williamboman/nvim-lsp-installer" }) -- simple to use language server installer
-	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
-	use({ "glepnir/lspsaga.nvim" }) -- LSP UIs
-
 	-- Formatter
 	use({ "MunifTanjim/prettier.nvim" })
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim" })
-
-	-- Treesitter
-	use({ "nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" } })
-	use({ "nvim-telescope/telescope-file-browser.nvim" })
 
 	-- VSCode like にする
 	use("lukas-reineke/indent-blankline.nvim")
@@ -103,6 +93,20 @@ return packer.startup(function(use)
 	use({ "github/copilot.vim" })
 
 	use({ "rcarriga/nvim-notify" })
+
+	-- golang
+	use("ray-x/go.nvim")
+	use("ray-x/guihua.lua") -- recommended if need floating window support
+
+  -- LSP
+	use({ "neovim/nvim-lspconfig" }) -- enable LSP
+	use({ "williamboman/nvim-lsp-installer" }) -- simple to use language server installer
+	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
+	use({ "glepnir/lspsaga.nvim" }) -- LSP UIs
+
+  -- Treesitter
+	use({ "nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" } })
+	use({ "nvim-telescope/telescope-file-browser.nvim" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

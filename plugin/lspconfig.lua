@@ -28,14 +28,16 @@ local on_attach = function(client, bufnr)
 	-- Lspsaga の方を使うのでここはコメントアウト
 	--buf_set_keymap("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
 
-  -- formatting
-  if client.server_capabilities.documentFormattingProvider then
-    vim.api.nvim_create_autocmd("BufWritePre", {
-      group = vim.api.nvim_create_augroup("Format", { clear = true }),
-      buffer = bufnr,
-      callback = function() vim.lsp.buf.format() end
-    })
-  end
+	-- formatting
+	if client.server_capabilities.documentFormattingProvider then
+		vim.api.nvim_create_autocmd("BufWritePre", {
+			group = vim.api.nvim_create_augroup("Format", { clear = true }),
+			buffer = bufnr,
+			callback = function()
+				vim.lsp.buf.format()
+			end,
+		})
+	end
 
 	-- To send formatted stream to null-ls
 	--client.resolved_capabilities.document_formatting = false
@@ -83,6 +85,9 @@ nvim_lsp.tsserver.setup({
 	cmd = { "typescript-language-server", "--stdio" },
 	capabilities = capabilities,
 })
+
+-- golang
+nvim_lsp["gopls"].setup({ on_attach = on_attach })
 
 nvim_lsp.sourcekit.setup({
 	on_attach = on_attach,
