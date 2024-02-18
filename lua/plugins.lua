@@ -49,6 +49,7 @@ return packer.startup(function(use)
 	use({ "EdenEast/nightfox.nvim" }) -- Color scheme
 	use({ "folke/tokyonight.nvim" })
 	use({ "craftzdog/solarized-osaka.nvim" })
+	use({ "catppuccin/nvim", as = "catppuccin" })
 
 	use({ "nvim-lualine/lualine.nvim" }) -- Statusline
 	use({ "windwp/nvim-autopairs" }) -- Autopairs, integrates with both cmp and treesitter
@@ -98,13 +99,13 @@ return packer.startup(function(use)
 	use("ray-x/go.nvim")
 	use("ray-x/guihua.lua") -- recommended if need floating window support
 
-  -- LSP
+	-- LSP
 	use({ "neovim/nvim-lspconfig" }) -- enable LSP
 	use({ "williamboman/nvim-lsp-installer" }) -- simple to use language server installer
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
 	use({ "glepnir/lspsaga.nvim" }) -- LSP UIs
 
-  -- Treesitter
+	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" } })
 	use({ "nvim-telescope/telescope-file-browser.nvim" })
 
