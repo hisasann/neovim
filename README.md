@@ -66,9 +66,7 @@
 $ brew install neovim
 ```
 
-## Install Neovim v0.5 or higher
-
-If you want to use the version that supports lua, click here.
+## Already installed Neovim
 
 If it is already included, uninstall it and then install it.
 
@@ -100,52 +98,9 @@ $ brew install --HEAD neovim
 git clone git@github.com:hisasann/neovim.git ~/.config/nvim
 ```
 
-### [Legacy]For init.vim configuration files
-
-If the following directories do not exist, create them.
-
-```bash
-$ mkdir ~/.config/nvim
-```
-
-Clone [hisasann/neovim](https://github.com/hisasann/neovim) and execute the following once you are in that directory.
-
-```bash
-$ cd vim
-$ ln -fs "$PWD/init.vim" ~/.config/nvim/init.vim
-$ ln -fs "$PWD/dein.toml" ~/.config/nvim/dein.toml
-$ ln -fs "$PWD/dein_lazy.toml" ~/.config/nvim/dein_lazy.toml
-```
-
 If you get an error with defx.nvim, etc., running the following on neovim may fix the problem.
 
     :UpdateRemotePlugins
-
-### [For init.vim]Install dein.vim
-
-```bash
-$ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-# For example, we just use `~/.cache/dein` as installation directory
-$ sh ./installer.sh ~/.cache/dein
-```
-
-To clear the cache of dein.vim
-
-```
-:call dein#recache_runtimepath()
-```
-
-To install modules with dein.vim
-
-```
-:call dein#install()
-```
-
-To update dein.vim modules
-
-```
-:call dein#update()
-```
 
 ## Type checking with nvim-lspconfig
 
