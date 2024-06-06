@@ -234,6 +234,11 @@ _G.packer_plugins = {
     path = "/Users/hisasann/.local/share/nvim/site/pack/packer/start/prettier.nvim",
     url = "https://github.com/MunifTanjim/prettier.nvim"
   },
+  ["refactoring.nvim"] = {
+    loaded = true,
+    path = "/Users/hisasann/.local/share/nvim/site/pack/packer/start/refactoring.nvim",
+    url = "https://github.com/ThePrimeagen/refactoring.nvim"
+  },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
     path = "/Users/hisasann/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
@@ -243,11 +248,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/hisasann/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["vim-gitgutter"] = {
-    loaded = true,
-    path = "/Users/hisasann/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
-    url = "https://github.com/airblade/vim-gitgutter"
   },
   ["zen-mode.nvim"] = {
     loaded = true,

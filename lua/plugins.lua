@@ -89,7 +89,8 @@ return packer.startup(function(use)
 	use({ "github/copilot.vim" })
 
 	-- git show change line
-	use({ "airblade/vim-gitgutter" })
+	-- so heavy
+	--use({ "airblade/vim-gitgutter" })
 
 	use({ "rcarriga/nvim-notify" })
 
@@ -113,6 +114,14 @@ return packer.startup(function(use)
 	use({
 		"nvimdev/dashboard-nvim",
 		requires = { "nvim-tree/nvim-web-devicons" },
+	})
+
+	use({
+		"ThePrimeagen/refactoring.nvim",
+		requires = {
+			{ "nvim-lua/plenary.nvim" },
+			{ "nvim-treesitter/nvim-treesitter" },
+		},
 	})
 
 	-- Automatically set up your configuration after cloning packer.nvim
