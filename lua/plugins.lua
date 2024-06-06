@@ -46,15 +46,18 @@ return packer.startup(function(use)
 	use({ "nvim-lua/plenary.nvim" }) -- Common utilities
 
 	-- Colorschemes
-	use({ "EdenEast/nightfox.nvim" }) -- Color scheme
-	use({ "folke/tokyonight.nvim" })
-	use({ "craftzdog/solarized-osaka.nvim" })
 	use({ "catppuccin/nvim", as = "catppuccin" })
+	use({ "ellisonleao/gruvbox.nvim" })
 
-	use({ "nvim-lualine/lualine.nvim" }) -- Statusline
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "nvim-tree/nvim-web-devicons", opt = true },
+	})
+	use({ "b0o/incline.nvim" })
+
 	use({ "windwp/nvim-autopairs" }) -- Autopairs, integrates with both cmp and treesitter
-	use({ "kyazdani42/nvim-web-devicons" }) -- File icons
-	use({ "akinsho/bufferline.nvim" })
+	use({ "nvim-tree/nvim-web-devicons" }) -- File icons
+	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
 
 	-- cmp plugins
 	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
@@ -78,20 +81,15 @@ return packer.startup(function(use)
 	-- VSCode like にする
 	use("lukas-reineke/indent-blankline.nvim")
 
-	use({ "windwp/nvim-ts-autotag" })
+	-- If you are setting up via nvim-treesitter.configs it has been deprecated! Please migrate to the new way. It will be removed in 1.0.0.
+	--use({ "windwp/nvim-ts-autotag" })
 
-	use({
-		"folke/zen-mode.nvim",
-		config = function()
-			require("zen-mode").setup({
-				-- your configuration comes here
-				-- or leave it empty to use the default settings
-				-- refer to the configuration section below
-			})
-		end,
-	})
+	use({ "folke/zen-mode.nvim" })
 
 	use({ "github/copilot.vim" })
+
+	-- git show change line
+	use({ "airblade/vim-gitgutter" })
 
 	use({ "rcarriga/nvim-notify" })
 
@@ -108,6 +106,14 @@ return packer.startup(function(use)
 	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" } })
 	use({ "nvim-telescope/telescope-file-browser.nvim" })
+
+	use({ "MunifTanjim/nui.nvim" })
+	use({ "folke/noice.nvim" })
+
+	use({
+		"nvimdev/dashboard-nvim",
+		requires = { "nvim-tree/nvim-web-devicons" },
+	})
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
