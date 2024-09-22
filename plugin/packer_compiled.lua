@@ -239,6 +239,11 @@ _G.packer_plugins = {
     path = "/Users/hisasann/.local/share/nvim/site/pack/packer/start/refactoring.nvim",
     url = "https://github.com/ThePrimeagen/refactoring.nvim"
   },
+  ["run-storm.nvim"] = {
+    loaded = true,
+    path = "/Users/hisasann/.local/share/nvim/site/pack/packer/start/run-storm.nvim",
+    url = "https://github.com/hisasann/run-storm.nvim"
+  },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
     path = "/Users/hisasann/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
