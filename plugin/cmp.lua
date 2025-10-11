@@ -47,7 +47,4 @@ cmp.setup.cmdline(':', {
     { name = 'cmdline' }
   })
 })
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-require('lspconfig')['ts_ls'].setup {
-  capabilities = capabilities
-}
+-- capabilities設定はlspconfig.luaで行う

@@ -86,8 +86,6 @@ return packer.startup(function(use)
 
 	use({ "folke/zen-mode.nvim" })
 
-	use({ "github/copilot.vim" })
-
 	-- git show change line
 	-- so heavy
 	--use({ "airblade/vim-gitgutter" })
@@ -100,8 +98,10 @@ return packer.startup(function(use)
 
 	-- LSP
 	use({ "neovim/nvim-lspconfig" }) -- enable LSP
-	use({ "williamboman/nvim-lsp-installer" }) -- simple to use language server installer
-	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
+	use({ "williamboman/mason.nvim" }) -- language server installer
+	use({ "williamboman/mason-lspconfig.nvim" }) -- mason lspconfig integration
+	use({ "mfussenegger/nvim-lint" }) -- linter
+	use({ "stevearc/conform.nvim" }) -- formatter
 	use({ "glepnir/lspsaga.nvim" }) -- LSP UIs
 
 	-- Treesitter

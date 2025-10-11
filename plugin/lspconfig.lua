@@ -1,8 +1,4 @@
-local status, nvim_lsp = pcall(require, "lspconfig")
-if not status then
-	return
-end
-
+-- nvim v11ではvim.lsp.configを直接使用
 local protocol = require("vim.lsp.protocol")
 
 -- Use an on_attach function to only map the following keys
@@ -74,31 +70,46 @@ protocol.CompletionItemKind = {
 -- Set up completion using nvim_cmp with LSP source
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-nvim_lsp.ts_ls.setup({
-	on_attach = on_attach,
-	filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+-- TypeScript
+vim.lsp.start_client({
+	name = "ts_ls",
 	cmd = { "typescript-language-server", "--stdio" },
+	filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+	on_attach = on_attach,
 	capabilities = capabilities,
 })
 
--- golang
-nvim_lsp["gopls"].setup({ on_attach = on_attach })
-
-nvim_lsp.sourcekit.setup({
+-- Go
+vim.lsp.start_client({
+	name = "gopls",
+	cmd = { "gopls" },
+	filetypes = { "go" },
 	on_attach = on_attach,
+	capabilities = capabilities,
 })
 
-nvim_lsp.lua_ls.setup({
+-- Swift
+vim.lsp.start_client({
+	name = "sourcekit",
+	cmd = { "sourcekit-lsp" },
+	filetypes = { "swift" },
 	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
+-- Lua
+vim.lsp.start_client({
+	name = "lua_ls",
+	cmd = { "lua-language-server" },
+	filetypes = { "lua" },
+	on_attach = on_attach,
+	capabilities = capabilities,
 	settings = {
 		Lua = {
 			diagnostics = {
-				-- Get the language server to recognize the `vim` global
 				globals = { "vim" },
 			},
-
 			workspace = {
-				-- Make the server aware of Neovim runtime files
 				library = vim.api.nvim_get_runtime_file("", true),
 				checkThirdParty = false,
 			},
