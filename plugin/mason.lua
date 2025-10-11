@@ -16,6 +16,5 @@ mason_lspconfig.setup({
 		"lua_ls",
 		"ts_ls",
 		"gopls",
-		"sourcekit",
 	},
 })
